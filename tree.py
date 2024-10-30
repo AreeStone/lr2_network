@@ -8,10 +8,10 @@ import time
 def treeTopo():
     net = Mininet(controller=RemoteController, switch=OVSKernelSwitch)
 
-    h1 = net.addHost('h1', ip='10.0.0.1', mac='00:00:00:00:00:01')
-    h2 = net.addHost('h2', ip='10.0.0.2', mac='00:00:00:00:00:02')
-    h3 = net.addHost('h3', ip='10.0.0.3', mac='00:00:00:00:00:03')
-    h4 = net.addHost('h4', ip='10.0.0.4', mac='00:00:00:00:00:04')
+    h1 = net.addHost('h1')
+    h2 = net.addHost('h2')
+    h3 = net.addHost('h3')
+    h4 = net.addHost('h4')
 
     s1 = net.addSwitch('s1')
     s2 = net.addSwitch('s2')

@@ -38,18 +38,18 @@ def treeTopo():
 
     net.start()
 
-    # s2.cmd('ovs-vsctl set Bridge s2 other_config:stp-priority=0x7000')  # s2 станет корневым мостом
-    # s1.cmd('ovs-vsctl set Bridge s1 other_config:stp-priority=0x7800')
-    # s3.cmd('ovs-vsctl set Bridge s3 other_config:stp-priority=0x8000')
-    # s4.cmd('ovs-vsctl set Bridge s4 other_config:stp-priority=0x8800')
-    # s5.cmd('ovs-vsctl set Bridge s5 other_config:stp-priority=0x9000')
-    #
-    # s1.cmd('ovs-vsctl set bridge s1 stp_enable=true')
-    # s2.cmd('ovs-vsctl set bridge s2 stp_enable=true')
-    # s3.cmd('ovs-vsctl set bridge s3 stp_enable=true')
-    # s4.cmd('ovs-vsctl set bridge s4 stp_enable=true')
-    # s5.cmd('ovs-vsctl set bridge s5 stp_enable=true')
-    #
+    s2.cmd('ovs-vsctl set Bridge s2 other_config:stp-priority=0x7000')  # s2 станет корневым мостом
+    s1.cmd('ovs-vsctl set Bridge s1 other_config:stp-priority=0x7800')
+    s3.cmd('ovs-vsctl set Bridge s3 other_config:stp-priority=0x8000')
+    s4.cmd('ovs-vsctl set Bridge s4 other_config:stp-priority=0x8800')
+    s5.cmd('ovs-vsctl set Bridge s5 other_config:stp-priority=0x9000')
+
+    s1.cmd('ovs-vsctl set bridge s1 stp_enable=true')
+    s2.cmd('ovs-vsctl set bridge s2 stp_enable=true')
+    s3.cmd('ovs-vsctl set bridge s3 stp_enable=true')
+    s4.cmd('ovs-vsctl set bridge s4 stp_enable=true')
+    s5.cmd('ovs-vsctl set bridge s5 stp_enable=true')
+
     # s1.cmdPrint('ovs-ofctl dump-ports-desc s1')
     # s2.cmdPrint('ovs-ofctl dump-ports-desc s2')
     # s3.cmdPrint('ovs-ofctl dump-ports-desc s3')

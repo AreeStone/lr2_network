@@ -57,6 +57,6 @@ def create_network():
     net.stop()
 
 
-if name == 'main':
+if __name__ == '__main__':
     setLogLevel('info')
     create_network()

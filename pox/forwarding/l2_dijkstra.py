@@ -333,7 +333,8 @@ class Switch (EventMixin):
       msg = of.ofp_packet_out()
       # OFPP_FLOOD is optional; some switches may need OFPP_ALL
       msg.actions.append(of.ofp_action_output(port = of.OFPP_FLOOD))
-      msg.buffer_id = event.ofp.buffer_id
+      # msg.buffer_id = event.ofp.buffer_id
+      msg.data = event.ofp
       msg.in_port = event.port
       self.connection.send(msg)
 

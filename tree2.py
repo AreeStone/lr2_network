@@ -19,12 +19,12 @@ def create_network():
     s4 = net.addSwitch('s4', protocols='OpenFlow13', stp=True, dpid="0000000000000004")
     s5 = net.addSwitch('s5', protocols='OpenFlow13', stp=True, dpid="0000000000000005")
 
-    # Настраиваем приоритеты для выбора Root Bridge
-    s1.setPriority(32768)
-    s2.setPriority(32768)
-    s3.setPriority(32768)
-    s4.setPriority(32768)
-    s5.setPriority(4096)  # Делаем s5 корневым коммутатором (Root Bridge)
+    # # Настраиваем приоритеты для выбора Root Bridge
+    # s1.setPriority(32768)
+    # s2.setPriority(32768)
+    # s3.setPriority(32768)
+    # s4.setPriority(32768)
+    # s5.setPriority(4096)  # Делаем s5 корневым коммутатором (Root Bridge)
 
     # Создаем хосты
     h1 = net.addHost('h1')
